@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::resource('films', 'FilmController');
+Route::get('categorie/{categorie}/films', 'FilmController@index')->name('films.categorie');
